@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Tito Juan</title>
-<meta name="description" content="Abre la invitacion">
+<meta name="description" content="Te invitamos a celebrar nuestra boda. Descubre todos los detalles de nuestro gran día.">
 <meta name="robots" content="index, follow">
 <meta property="og:locale" content="es_ES">
 <link rel="canonical" href="https://inakiynerea.github.io/boda/">
@@ -13,7 +13,7 @@
 <link rel="preload" as="image" href="https://inakiynerea.github.io/boda/foto1.jpg">
 <!-- Open Graph -->
 <meta property="og:title" content="Tito Juan">
-<meta property="og:description" content="Abre la invitacion">
+<meta property="og:description" content="Te invitamos a celebrar nuestra boda. Descubre todos los detalles de nuestro gran día.">
 <meta property="og:image" content="https://inakiynerea.github.io/boda/ronda-portada.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
@@ -24,7 +24,7 @@
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Tito Juan">
-<meta name="twitter:description" content="Abre la invitacion">
+<meta name="twitter:description" content="Te invitamos a celebrar nuestra boda. Descubre todos los detalles de nuestro gran día.">
 <meta name="twitter:image" content="https://inakiynerea.github.io/boda/ronda-portada.jpg">
 
 <!-- Fuentes -->
@@ -43,8 +43,8 @@ p{margin:5px;}
 #pantalla-inicial{
     position:fixed;
     inset:0;
-    background:url("https://inakiynerea.github.io/boda/ronda-portada.jpg?v=4") no-repeat center center;
-    background-size:cover;
+    overflow:hidden; /* 👈 importante */
+
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -172,8 +172,17 @@ h2{text-transform:uppercase;font-family:'Cormorant Garamond', serif;margin-botto
 
 <!-- PANTALLA INICIAL -->
 <div id="pantalla-inicial">
+
+    <!-- Imagen optimizada -->
+    <img src="https://inakiynerea.github.io/boda/ronda-portada.jpg?v=4"
+         alt="Portada boda"
+         fetchpriority="high"
+         decoding="async"
+         style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-1;">
+
     <p>¡EL DÍA SE ACERCA!</p>
     <a href="#" class="boton-inicial" onclick="abrirInvitacion(event)">ABRIR INVITACIÓN</a>
+
 </div>
 
 <main id="invitation">
@@ -217,12 +226,21 @@ h2{text-transform:uppercase;font-family:'Cormorant Garamond', serif;margin-botto
         <div class="ceremonia">
             <h3>Ceremonia</h3>
             <p>Iglesia de Padre Jesús<br>C/ Real, 13<br>Ronda, Málaga</p>
-            <iframe title="Ubicación Iglesia de Padre Jesús" src="https://www.google.com/maps?q=Iglesia+de+Padre+Jesus+Ronda&output=embed" width="100%" height="250" style="border:0;border-radius:10px;margin-top:10px;" loading="lazy"></iframe>
+         <iframe title="Ubicación Iglesia de Padre Jesús"
+src="https://www.google.com/maps?q=Iglesia+de+Padre+Jesus+Ronda&output=embed"
+width="100%" height="250"
+style="border:0;border-radius:10px;margin-top:10px;"
+loading="lazy"
+referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="celebracion" style="margin-top:15px;">
             <h3>Celebración</h3>
             <p>Heredad Los Alba<br>Carretera Algeciras, Ronda</p>
-            <iframe title="Ubicación Heredad Los Alba" src="https://www.google.com/maps?q=Heredad+Los+Alba+Ronda&output=embed" width="100%" height="250" style="border:0;border-radius:10px;margin-top:10px;" loading="lazy"></iframe>
+           <iframe title="Ubicación Heredad Los Alba"
+src="https://www.google.com/maps?q=Heredad+Los+Alba+Ronda&output=embed"
+width="100%" height="250"
+style="border:0;border-radius:10px;margin-top:10px;"
+loading="lazy"></iframe>
         </div>
     </div>
 </section>
