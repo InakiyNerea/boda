@@ -6,8 +6,11 @@
 
 <title>Tito Juan</title>
 <meta name="description" content="Abre la invitacion">
+<meta name="robots" content="index, follow">
+<meta property="og:locale" content="es_ES">
 <link rel="canonical" href="https://inakiynerea.github.io/boda/">
-
+<link rel="preload" as="image" href="https://inakiynerea.github.io/boda/ronda-portada.jpg">
+<link rel="preload" as="image" href="https://inakiynerea.github.io/boda/foto1.jpg">
 <!-- Open Graph -->
 <meta property="og:title" content="Tito Juan">
 <meta property="og:description" content="Abre la invitacion">
@@ -95,8 +98,7 @@ p{margin:5px;}
     outline:none;
 }
 .boton:hover, .boton-maps:hover, .boton-whatsapp:hover, .boton-copiar:hover{background:#000;color:#fff;}
-.boton-maps:focus, .boton-maps:active{outline:none;box-shadow:none;background:#fff;color:#000;}
-a{-webkit-tap-highlight-color: transparent;}
+.boton-maps:focus, .boton-maps:active{outline:none;box-shadow:none;background:#fff;color:#000;
 }
 /* Extra para móviles Android */
 a {
@@ -200,7 +202,7 @@ h2{text-transform:uppercase;font-family:'Cormorant Garamond', serif;margin-botto
 <section>
     <h2>CONFIRMA TU ASISTENCIA</h2>
     <p>Nos encantaría contar contigo en nuestro día. Por favor, confirma tu asistencia antes del <strong>21 de Marzo de 2026</strong>.</p>
-    <a class="boton" href="https://docs.google.com/forms/d/e/1FAIpQLSfqXMHrm615boPe7YyzUk5AhUR8w9_5d807FafDdk79SJjrnA/viewform?usp=sf_link" target="_blank">CONFIRMAR ASISTENCIA</a>
+    <a class="boton" href="https://docs.google.com/forms/d/e/1FAIpQLSfqXMHrm615boPe7YyzUk5AhUR8w9_5d807FafDdk79SJjrnA/viewform?usp=sf_link" target="_blank" rel="noopener">CONFIRMAR ASISTENCIA</a>
 </section>
 
 <!-- UBICACIÓN -->
@@ -235,7 +237,7 @@ h2{text-transform:uppercase;font-family:'Cormorant Garamond', serif;margin-botto
       <div style="background:white; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.05); width:250px; padding:20px;">
         <p><strong>Casa del Rey Moro</strong></p>
         <p>La Casa del Rey Moro con la Mina de Agua y el Jardín de Forestier.</p>
-        <a href="https://www.google.com/maps?q=Casa+del+Rey+Moro+Ronda" target="_blank" class="boton-maps">Ver en Google Maps</a>
+        <a href="https://www.google.com/maps?q=Casa+del+Rey+Moro+Ronda" target="_blank" class="boton-maps"> Ver en Google Maps</a>
       </div>
       <div style="background:white; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.05); width:250px; padding:20px;">
         <p><strong>Plaza de Toros</strong></p>
@@ -270,8 +272,8 @@ h2{text-transform:uppercase;font-family:'Cormorant Garamond', serif;margin-botto
             <strong>Nerea Aizpuru</strong>
         </div>
         <div style="display:flex;justify-content:space-around;flex-wrap:wrap;gap:10px;">
-            <a class="boton-whatsapp" href="https://wa.me/34680842493" target="_blank">💬 WhatsApp</a>
-            <a class="boton-whatsapp" href="https://wa.me/34697923033" target="_blank">💬 WhatsApp</a>
+            <a class="boton-whatsapp" href="https://wa.me/34680842493" target="_blank" rel="noopener">💬 WhatsApp</a>
+            <a class="boton-whatsapp" href="https://wa.me/34697923033" target="_blank" rel="noopener">💬 WhatsApp</a>
         </div>
     </div>
 </section>
@@ -353,5 +355,6 @@ function copiarIBAN() {
 </script>
 </body>
     </html>
+
 
     
