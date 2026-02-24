@@ -91,6 +91,24 @@ p{margin:5px;}
 .boton-maps:focus, .boton-maps:active{outline:none;box-shadow:none;background:#fff;color:#000;}
 a{-webkit-tap-highlight-color: transparent;
 }
+/* Quitar completamente destello gris en móviles */
+.boton-maps,
+.boton-maps:focus,
+.boton-maps:active,
+.boton-maps:visited {
+    outline: none !important;
+    box-shadow: none !important;
+    background: #fff !important;
+    color: #000 !important;
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+/* Eliminar resaltado en todos los enlaces en Android */
+a, a:focus, a:active {
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-tap-highlight-color: rgba(0,0,0,0) !important;
+}
 /* Extra para móviles Android */
 a {
     -webkit-tap-highlight-color: transparent;
