@@ -338,32 +338,145 @@ h2{text-transform:uppercase;font-family:'Cormorant Garamond', serif;margin-botto
     </div>
 </section>
 
-<!-- REGALO -->
-<section class="regalo">
-    <h2>REGALO</h2>
-    <p class="texto-regalo">
-        Vuestra compañía será nuestro mayor regalo, pero si deseáis tener un detalle con nosotros,
-        podéis ayudarnos a comenzar esta nueva etapa.
-    </p>
-    <div class="caja-regalo">
-        <!-- IBAN -->
-        <p class="titulo-iban">IBAN</p>
-        <p class="iban" id="ibanTexto">ES33 1583 0001 1891 8952 4373</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- BENEFICIARIO -->
-        <p class="titulo-iban" style="margin-top:20px;">BENEFICIARIO</p>
-        <p class="iban" id="beneficiarioTexto">N Aizpuru Ortega I Salaberria Garcia</p>
+<title>Nerea e Iñaki</title>
+<meta name="description" content="Te invitamos a celebrar nuestra boda. Abre este enlace para descubrir todos los detalles de nuestro gran día.">
 
-        <!-- BOTONES ALINEADOS -->
-        <div style="display:flex; justify-content:center; gap:15px; flex-wrap:wrap; margin-top:15px;">
-            <button class="boton-copiar" onclick="copiarIBAN()">Copiar IBAN</button>
-            <button class="boton-copiar" onclick="copiarBeneficiario()">Copiar Beneficiario</button>
-        </div>
+<meta property="og:title" content="Nerea e Iñaki">
+<meta property="og:description" content="Abre este enlace para descubrir todos los detalles de nuestro gran día.">
+<meta property="og:image" content="https://inakiynerea.github.io/boda/ronda-portada.jpg">
+<meta property="og:url" content="https://inakiynerea.github.io/boda/">
+<meta property="og:type" content="website">
+<meta name="format-detection" content="telephone=no">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Playfair+Display:wght@400;600&family=Italianno&display=swap" rel="stylesheet">
 
-        <!-- Mensaje de copia -->
-        <p class="gracias" id="mensajeCopiado"></p>
-    </div>
-    <footer>Con mucho cariño, os esperamos</footer>
+<meta name="theme-color" content="#ffffff">
+
+<style>
+/* GLOBAL */
+body{margin:0;font-family:'Cormorant Garamond', serif;background:#fff;color:#000;text-align:center;}
+p{margin:5px;}
+
+/* PANTALLA INICIAL */
+#pantalla-inicial{
+    position:fixed;
+    inset:0;
+    background:url("https://inakiynerea.github.io/boda/ronda-portada.jpg?v=4") no-repeat center center;
+    background-size:cover;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    z-index:9999;
+    transition:opacity 1s;
+}
+
+#pantalla-inicial p{
+    color:#fff;
+    font-weight:600;
+    letter-spacing:2px;
+    font-size:1.2em;
+    margin-bottom:20px;
+    margin-top:-80px;
+}
+
+.boton-inicial{
+    border-radius:30px;
+    border:1px solid #fff;
+    background:transparent;
+    color:#fff;
+    font-weight:600;
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    transition:0.3s;
+    animation:vibrar 1s infinite;
+    padding:25px 40px;
+    font-size:1.2em;
+    margin-top:15vh;
+}
+.boton-inicial:hover{background:#fff;color:#000;}
+
+/* ============================= */
+/* BOTONES GENERALES OPTIMIZADOS */
+/* ============================= */
+.boton,
+.boton-maps,
+.boton-whatsapp,
+.boton-copiar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 1px solid #000;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease, color 0.3s ease;
+    outline: none;
+    box-shadow: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Hover solo en escritorio */
+@media (hover: hover) {
+    .boton:hover,
+    .boton-maps:hover,
+    .boton-whatsapp:hover,
+    .boton-copiar:hover {
+        background: #000;
+        color: #fff;
+    }
+}
+
+/* Eliminar efecto gris al pulsar en móvil */
+.boton:focus,
+.boton:active,
+.boton-maps:focus,
+.boton-maps:active,
+.boton-whatsapp:focus,
+.boton-whatsapp:active,
+.boton-copiar:focus,
+.boton-copiar:active {
+    outline: none !important;
+    box-shadow: none !important;
+    background: #fff !important;
+    color: #000 !important;
+}
+
+/* Quitar resaltado gris global en Android */
+a,
+a:focus,
+a:active {
+    -webkit-tap-highlight-color: rgba(0,0,0,0) !important;
+    outline: none !important;
+}
+
+/* Extra: eliminar menú emergente en iOS */
+* {
+    -webkit-touch-callout: none;
+}
+
+/* SECCIONES INVITACIÓN */
+section{
+    padding:50px 20px;
+    opacity:0;
+    transform:translateY(50px);
+    transition:all 0.8s ease;
+    background:#fefefe;
+    margin:0 auto 2
 </section>
 
 <div class="flecha-scroll" id="flecha" onclick="scrollAbajo()">
@@ -439,4 +552,4 @@ function mostrarMensaje(texto) {
 }
 </script>
 </body>
-    </html>
+</htm
