@@ -353,7 +353,7 @@ h2{text-transform:uppercase;font-family:'Cormorant Garamond', serif;margin-botto
         <!-- BENEFICIARIO -->
         <div class="fila-regalo">
      <p class="titulo-iban" style="margin-top:20px;">BENEFICIARIO</p>
-<p style="font-size:0.85em; letter-spacing:2px; margin:5px 0;">
+<p style="font-size:0.90em; letter-spacing:2px; margin:5px 0;">
   N Aizpuru Ortega I Salaberria Garcia
 </p>
 
@@ -421,15 +421,15 @@ setInterval(function(){
 
 // COPIAR IBAN
 function copiarIBAN() {
-    const texto = document.getElementById("ibanTexto").innerText;
+    const texto = document.getElementById("Iban").innerText;
     navigator.clipboard.writeText(texto).then(function() {
-        mostrarMensaje("IBAN copiado ✔");
+        mostrarMensaje("Iban copiado ✔");
     });
 }
 
 // COPIAR BENEFICIARIO
 function copiarBeneficiario() {
-    const texto = document.getElementById("beneficiarioTexto").innerText;
+    const texto = document.getElementById(" Beneficiario").innerText;
     navigator.clipboard.writeText(texto).then(function() {
         mostrarMensaje("Beneficiario copiado ✔");
     });
@@ -443,4 +443,4 @@ function mostrarMensaje(texto) {
 }
 </script>
 </body>
-            </html>
+    </html>
